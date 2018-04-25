@@ -355,7 +355,7 @@ const apawnStyleFunc = function (feature) {
     text: new ol.style.Text({
       font: '12px Calibri,sans-serif',
       textAlign: 'center',
-      fill: new ol.style.Fill({ color: 'rgba(255,255,255,0.9)' }),
+      fill: new ol.style.Fill({ color: 'rgba(255,255,0,0.9)' }),
       text: this.get('_label') || '' ,
       offsetY: 15
     })
@@ -384,7 +384,7 @@ const playerStyleFunc = function (feature) {
     text: new ol.style.Text({
       font: '12px Calibri,sans-serif',
       textAlign: 'center',
-      fill: new ol.style.Fill({ color: 'rgba(255,255,255,1)' }),
+      fill: new ol.style.Fill({ color: 'rgba(255,255,0,1)' }),
       text: this.get('_label') || '' ,
       offsetY: 15
     })
@@ -393,7 +393,7 @@ const playerStyleFunc = function (feature) {
   if (this.get('_friend') && this.get('_lineGeo')) {
     result.push(new ol.style.Style({
       geometry: this.get('_lineGeo'),
-      stroke: new ol.style.Stroke({ color: '#FFFFFFFF', width: 1.8 })
+      stroke: new ol.style.Stroke({ color: '#FFFFFFFF', width: 1.5 })
     }))
   }
   return result
@@ -464,7 +464,7 @@ const safeCircle = new ol.Feature({
   geometry: new ol.geom.Circle([-1, -1], 100)
 })
 safeCircle.setId('safe')
-safeCircle.set('_color', 'rgba(0,0,255,0.9)')
+safeCircle.set('_color', 'rgba(255,0,0,0.9)')
 safeCircle.setStyle(zoneStyleFunc)
 gridSource.addFeature(safeCircle)
 
@@ -472,7 +472,7 @@ const poisonCircle = new ol.Feature({
   geometry: new ol.geom.Circle([-1, -1], 0)
 })
 poisonCircle.setId('poison')
-poisonCircle.set('_color', 'rgba(255,255,255,0.9)')
+poisonCircle.set('_color', 'rgba(120,255,50,0.9)')
 poisonCircle.setStyle(zoneStyleFunc)
 gridSource.addFeature(poisonCircle)
 
@@ -492,9 +492,9 @@ const itemStyleFunc = function (feature) {
     image: new ol.style.Circle({
       radius: 3,
       fill: new ol.style.Fill({
-        color: 'rgba(0,255,0,1)'
+        color: 'rgba(235,0,255,0.5)'
       }),
-      stroke: new ol.style.Stroke({color: 'rgba(0,0,255,0.8)', width: 1.5 })
+      stroke: new ol.style.Stroke({color: 'rgba(0,0,255,0.8)', width: 0.1 })
     }),
     text: new ol.style.Text({
       font: 'bold 14px Calibri,sans-serif',
@@ -502,7 +502,7 @@ const itemStyleFunc = function (feature) {
       fill: new ol.style.Fill({ color: 'rgba(239,108,0,1)' }),
       text: this.get('_label') || '' ,
       offsetY: 12,
-      stroke: new ol.style.Stroke({color: 'rgba(255,255,255,1)', width: 2.5 })
+      stroke: new ol.style.Stroke({color: 'rgba(255,255,255,1)', width: 0.9 })
     })
   })
   return [style]
@@ -541,7 +541,7 @@ const meStyleFunc = function (feature) {
   if (lineGeo)
   result.push(new ol.style.Style({
     geometry: this.get('_lineGeo'),
-    stroke: new ol.style.Stroke({ color: 'rgba(64,255,64,1)', width: 2.2 })
+    stroke: new ol.style.Stroke({ color: 'rgba(64,255,64,1)', width: 1.6 })
   }))
   return result
 }
