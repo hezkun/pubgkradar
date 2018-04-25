@@ -66,8 +66,6 @@ browserRedirect();
           <hr>
           <input type="radio" id="erangel" value="erangel" v-model="mapType"><label for="erangel">海岛</label>
           <input type="radio" id="miramar" value="miramar" v-model="mapType"><label for="miramar">沙漠</label>
-          <br><br>
-
           <hr>
           <input type="checkbox" id="followme" v-model="followMe"><label for="followme">跟随玩家</label>
         <br>
@@ -86,12 +84,14 @@ browserRedirect();
           <input type="checkbox" id="showHead3" v-model="showHead3"><label for="showBack3">3级头</label>
           <input type="checkbox" id="showArmor3" v-model="showArmor3"><label for="showBack3">3级甲　</label>
           <br>
+          <br>
           <input type="checkbox" id="showFirstAid" v-model="showFirstAid"><label for="showFirstAid">急救包</label>
           <input type="checkbox" id="showMedKit" v-model="showMedKit"><label for="showMedKit">医疗箱</label>
           <input type="checkbox" id="showDrink" v-model="showDrink"><label for="showDrink">饮料</label>
           <br>
           <input type="checkbox" id="showGrenade" v-model="showGrenade"><label for="showGrenade">手雷</label>
           <input type="checkbox" id="showSmokeBomb" v-model="showSmokeBomb"><label for="showSmokeBomb">烟雾　</label>
+          <br>
           <br>
           <input type="checkbox" id="showLowST" v-model="showLowST"><label for="showLowST">基础镜</label>
           <input type="checkbox" id="showHighST" v-model="showHighST"><label for="showHighST">高倍镜</label>
@@ -105,9 +105,11 @@ browserRedirect();
           <input type="checkbox" id="showSRSuppressor" v-model="showSRSuppressor"><label for="showSRSuppressor">狙消音</label>
           <input type="checkbox" id="showSRExtended" v-model="showSRExtended"><label for="showSRExtended">狙扩容</label>
           <input type="checkbox" id="showSRStock" v-model="showSRStock"><label for="showSRStock">狙枪托</label>
+          <br> 
           <br>
           <input type="checkbox" id="showAmmo556" v-model="showAmmo556"><label for="showAmmo556">5.56</label>
           <input type="checkbox" id="showAmmo762" v-model="showAmmo762"><label for="showAmmo762">7.62</label>
+          <br>
           <input type="checkbox" id="showM16A4" v-model="showM16A4"><label for="showM16A4">m16</label>
           <input type="checkbox" id="showHK416" v-model="showHK416"><label for="showHK416">m416</label>
           <input type="checkbox" id="showSCAR" v-model="showSCAR"><label for="showSCAR">scar</label>
@@ -118,6 +120,7 @@ browserRedirect();
           <input type="checkbox" id="showKar98k" v-model="showKar98k"><label for="showKar98k">98k</label>
 
         <input type="checkbox" id="showitemall" v-model="showItemAll">
+        <br>
         <label for="showitemall">所有</label>
         <hr>
         <a class="button is-small" @click="setFPS(30)">fps30</a>
