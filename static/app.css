@@ -10,7 +10,7 @@ html { overflow-y: hidden; }
 .sidenav {
   opacity:1;
   height: 100%; /* Full-height: remove this if you want "auto" height */
-  width: 16%; /* Set the width of the sidebar */
+  width: 24%; /* Set the width of the sidebar */
   position: fixed; /* Fixed Sidebar (stay in place on scroll) */
   z-index: 1; /* Stay on top */
   top: 8%; /* Stay at the top */
@@ -30,9 +30,9 @@ html { overflow-y: hidden; }
       top: 50%;
       left:0px;
       background: white;
-      background-color:rgba(255,255,0, 0.5);
-      height: 10%;
-      width: 1%;
+      background-color:rgba(255,255,255, 0.5);
+      height: 20%;
+      width: 3%;
       padding: 6px;
       display: block;
       border-top-right-radius:10px;
